@@ -1,0 +1,8 @@
+<h1>zmień urodziny</h1>
+
+<%= form_for(@birthday, url: user_birthday_path(current_user, @birthday)) do |f| %>
+  <%= render 'fields', f: f %> <br/>  
+  <%= f.submit 'zmień', class: "btn btn-large btn-primary" %>
+<% end %>
+
+<%= link_to 'Cofnij', current_user %>

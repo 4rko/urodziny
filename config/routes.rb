@@ -1,9 +1,13 @@
 TmpDeviseAndNestedModelForms::Application.routes.draw do
+
   devise_for :users
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
+  resources :users, only: :show do
+    resources :birthdays, only: [:new, :create, :edit, :update]
+  end
+
   root :to => 'static_pages#welcome'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

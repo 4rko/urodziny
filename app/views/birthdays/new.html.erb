@@ -1,0 +1,7 @@
+<h1>dodaj urodziny</h1>
+
+<%= form_for(@birthday, url: user_birthdays_path) do |f| %>
+  <%= render 'fields', f: f %> <br/>  
+  <%= f.submit 'dodaj', class: "btn btn-large btn-primary" %>
+<% end %>
+
