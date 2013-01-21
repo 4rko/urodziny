@@ -27,4 +27,10 @@ class BirthdaysController < ApplicationController
     end
   end
 
+  def destroy
+    @birthday = current_user.birthdays.find(params[:id])
+    @birthday.destroy
+    render 'users/show'
+    # redirect_to current_user
+  end
 end

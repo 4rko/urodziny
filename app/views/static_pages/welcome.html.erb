@@ -1,10 +1,10 @@
 <% if user_signed_in? %>
 	<h1>Witaj <%= current_user.email %>!</h1>
-	<p>Siu lu lulu</p>
+	<p>:-]</p>
 	<p>Możesz się <%= link_to 'wylogować', destroy_user_session_path, method: :delete %>.</p>
 <% else %>
-	<h1>Witaj nieznajomy!</h1>
-	<p>Siu lu lulu</p>
-	<p>Możesz się <%= link_to 'zarejestrować', new_user_registration_path %> 
-		albo <%= link_to 'zalogować', new_user_session_path %>.</p>	
+	<h1>Witaj!</h1>
+	<p>Masz dużo znajomych, na których Ci zależy? Już nigdy nie zapomnisz o ich święcie!</p>
+	<p>Możesz się <%= link_to 'zarejestrować', new_user_registration_path, class: 'btn btn-primary' %> 
+		albo <%= link_to 'zalogować', new_user_session_path, class: 'btn btn-success' %>.</p>	
 <% end %>

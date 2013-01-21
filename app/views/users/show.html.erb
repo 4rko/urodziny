@@ -2,13 +2,13 @@
 <h1><input type='textfield' placeholder="czyje?" id="q"></input></h1>
 
 <table class='table'>
-  <tr>
+<!--   <tr>
     <th>data</th>
     <th>imię</th>
     <th>nazwisko</th>
     <th>pseudonim</th>
-    <!-- <th>zdjęcie</th> -->
-  </tr>
+    <th>zdjęcie</th>
+  </tr> -->
 
 	<% current_user.birthdays.each do |birthday| %>
 	  <tr class="search_item">
@@ -16,28 +16,10 @@
 	    <td class="search_text"><%= birthday.name %></td>
 	    <td class="search_text"><%= birthday.surname %></td>
 	    <td class="search_text"><%= birthday.nick %></td>
-      <td><%= link_to 'zmień', edit_user_birthday_path(current_user, birthday) %></td>
+      <td>
+      	<%= link_to 'zmień', edit_user_birthday_path(current_user, birthday), class: 'btn btn-mini' %>
+      	<%= link_to 'pozbądź się', user_birthday_path(current_user, birthday), method: :delete, class: 'btn btn-mini btn-danger' %> 
+      </td>
 	  </tr>
 	<% end %>
 </table>
-
-
-<script type="text/javascript">
-  $().ready( function() {
-    // Instant Search
-    $('#q').keyup( function() {
-      $('.search_item').each( function() {
-        var re = new RegExp($('#q').val(), 'i');
-        attributes = $(this).children('.search_text');
-        for (var i=0; i<attributes.length; ++i) { // FIXME da się użyć ładniejszego fora?
-          if (attributes[i].innerHTML.match(re)) {
-            $(attributes[i]).parent().show();
-            break;
-          } else { 
-            $(attributes[i]).parent().hide();
-          };
-        };
-      });
-    });
-  });
-</script>

@@ -3,7 +3,7 @@ TmpDeviseAndNestedModelForms::Application.routes.draw do
   devise_for :users
 
   resources :users, only: :show do
-    resources :birthdays, only: [:new, :create, :edit, :update]
+    resources :birthdays, only: [:new, :create, :edit, :update, :destroy]
   end
 
   root :to => 'static_pages#welcome'
