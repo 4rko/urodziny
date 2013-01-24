@@ -8,6 +8,7 @@ TmpDeviseAndNestedModelForms::Application.routes.draw do
 
   root :to => 'static_pages#welcome'
 
+  mount Resque::Server, at: '/resque'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -4,6 +4,10 @@ gem 'rails', '3.2.11'
 gem 'sqlite3'
 gem 'jquery-rails'
 gem 'devise'
+gem 'resque', require: 'resque/server'
+gem 'resque_mailer'
+# za chwilę
+# gem 'resque-scheduler' => require: 'resque_sheduler'
 
 # Gems used only for assets and not required
 # in production environments by default.
