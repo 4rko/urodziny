@@ -1,4 +1,4 @@
-TmpDeviseAndNestedModelForms::Application.routes.draw do
+Urodziny::Application.routes.draw do
 
   devise_for :users
 

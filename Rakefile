@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-TmpDeviseAndNestedModelForms::Application.load_tasks
+Urodziny::Application.load_tasks
