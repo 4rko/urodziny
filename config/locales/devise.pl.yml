@@ -29,6 +29,8 @@ pl:
       invalid_token: 'Niepoprawny token.'
       timeout: 'Sesja wygasła - zaloguj się ponownie, aby kontynuować.'
       inactive: 'Konto nie zostało jeszcze aktywowane.'
+      user:
+        not_found_in_database: 'Niepoprawny adres e-mail lub hasło.'
     sessions:
       signed_in: 'Witaj ponownie!'
       signed_out: 'Wylogowałeś się. Zapraszamy ponownie!'
